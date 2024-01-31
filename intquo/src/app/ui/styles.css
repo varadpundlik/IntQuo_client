@@ -1,0 +1,50 @@
+.hellostyle {
+    width: 100%;
+    height: 100vh;
+    white-space: pre;
+    z-index: 5;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Monofett", monospace;
+    color: #9ef01a;
+    font-size: 428.448px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 95px;  /* Adjust the size of the circles as needed, excluding border width */
+    height: 100px; /* Increase the height to make them oval */
+    background-color: #9ef01a; /* Filled color for the circle */
+    border: 3px solid #9ef01a; /* Border color to match the filled color */
+    border-radius: 24px; /* Adjust the border-radius to create rounded corners */
+    margin-right: 0px; /* Adjust the negative margin to connect only the borders */
+  }
+  
+  .circle:last-child {
+    margin-right: 0; /* Remove negative margin for the last circle */
+  }
+  
+  .circle-text {
+    font-family:  sans-serif; /* Specify the desired font */
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #fff; /* Adjust the text color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
