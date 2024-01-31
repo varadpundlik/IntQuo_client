@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+
+.titlecolor {
+    color: #9ef01a;
+}
+
 .hellostyle {
     width: 100%;
     height: 100vh;
@@ -12,39 +18,55 @@
     text-transform: uppercase;
     line-height: 1.1;
     text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .circle-container {
+    margin-top: -15vw; 
+    /* Remove the position: relative; */
+}
+
+.circle-container {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .circle {
-    width: 95px;  /* Adjust the size of the circles as needed, excluding border width */
-    height: 100px; /* Increase the height to make them oval */
-    background-color: #9ef01a; /* Filled color for the circle */
-    border: 3px solid #9ef01a; /* Border color to match the filled color */
-    border-radius: 24px; /* Adjust the border-radius to create rounded corners */
-    margin-right: 0px; /* Adjust the negative margin to connect only the borders */
-  }
-  
-  .circle:last-child {
-    margin-right: 0; /* Remove negative margin for the last circle */
-  }
-  
-  .circle-text {
-    font-family:  sans-serif; /* Specify the desired font */
-    font-size: 16px; /* Adjust the font size as needed */
-    color: #fff; /* Adjust the text color as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
+}
+
+.circle-text {
+    font-size: 19vw;
+    animation: bounceAnimation 0.5s ease infinite alternate;
+    transform-origin: center bottom;
+    display: inline-block; /* Add this to prevent weird inline behavior */
+    /* padding-bottom: 5px; */
+    /* margin-top: -5px; */
+}
+
+.circle-text:nth-child(2) {
+    animation-delay: 0.1s; /* Delay the animation for the second circle-text */
+}
+
+.circle-text:nth-child(3) {
+    animation-delay: 0.2s; /* Delay the animation for the third circle-text */
+}
+
+.circle-text:nth-child(4) {
+    animation-delay: 0.3s; /* Delay the animation for the fourth circle-text */
+}
+
+.circle-text:nth-child(5) {
+    animation-delay: 0.4s; /* Delay the animation for the fifth circle-text */
+}
+
+.circle-text:nth-child(6) {
+    animation-delay: 0.5s; /* Delay the animation for the sixth circle-text */
+}
+
+.circle-text:nth-child(7) {
+    animation-delay: 0.6s; /* Delay the animation for the seventh circle-text */
+}
+
+@keyframes bounceAnimation {
+    to {
+        transform: scaleY(0.8); /* Adjust the scaleY for the bounce effect */
+    }
+}

@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 type Props = {}
 
@@ -40,9 +42,12 @@ const Navbar = (props: Props) => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <div className="navbar-end">
-      <a className="btn">Button</a>
-    </div>
+ <div className="navbar-end">
+  {/* Use Link from Next.js for navigation */}
+  <Link href="../../register/page">
+    <button className="btn bg-yellow-200 text-black">Sign Up</button>
+  </Link>
+</div>
   </div>
   </div>
   )
