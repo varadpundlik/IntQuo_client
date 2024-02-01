@@ -1,5 +1,6 @@
+"use client";
 import React from 'react';
-import Navbar from './ui/navbar/Navbar';
+import Navbar from './ui/navbar/navbar';
 import './ui/styles.css';
 
 type Props = {};
