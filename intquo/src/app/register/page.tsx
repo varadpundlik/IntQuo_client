@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Header from "./header";
+import Navbar from "../ui/navbar/navbar";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -52,17 +53,18 @@ export default function Register() {
 
   return (
     <div>
+      <Navbar />
       <Header />
-      <div className="bg-white flex justify-space-evenly">
+      <div className="flex justify-space-evenly">
         <form
-          className="w-1/2 p-6 bg-white rounded shadow px-8 pt-6 pb-8 mb-4"
+          className="w-1/2 p-6 rounded shadow px-8 pt-6 pb-8 mb-4"
           onSubmit={handleSubmit}
         >
           <h1 className="text-2xl font-bold mb-6">Register</h1>
           <div className="mb-4">
             <label
               htmlFor="username"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Username
             </label>
@@ -77,7 +79,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="firstName"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               First Name
             </label>
@@ -92,7 +94,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="lastName"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Last Name
             </label>
@@ -107,7 +109,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="password"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Password
             </label>
@@ -122,7 +124,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="password"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Confirm Password
             </label>
@@ -137,7 +139,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Email
             </label>
@@ -152,7 +154,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="passoutYear"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Passout Year
             </label>
@@ -167,7 +169,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="college"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               College
             </label>
@@ -182,7 +184,7 @@ export default function Register() {
           <div className="mb-4">
             <label
               htmlFor="currentOrg"
-              className="block  text-gray-700 font-bold mb-2"
+              className="block  text-white font-bold mb-2"
             >
               Current Organization
             </label>
@@ -196,15 +198,16 @@ export default function Register() {
           </div>
           <button
             type="submit"
-            className="w-full bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600"
+            className="w-full bg-[#9ef01a] text-white py-2 px-4 rounded hover:bg-indigo-600"
           >
             Register
           </button>
         </form>
-        <div className="px-50">
-          <img src="https://t.pimg.jp/064/613/534/1/64613534.jpg" />
+        <div>
+          <img className="px-650 pt-10" src="https://cdni.iconscout.com/illustration/premium/thumb/fill-registration-form-6492574-5402759.png?f=webp" />
         </div>
       </div>
     </div>
   );
 }
+//comment
