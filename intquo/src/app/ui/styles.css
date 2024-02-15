@@ -70,3 +70,8 @@
         transform: scaleY(0.8); /* Adjust the scaleY for the bounce effect */
     }
 }
+
+.green-section1{
+    background-color: #38B000;
+    height: 42vw;
+}

@@ -1,17 +1,18 @@
 "use client";
 import React from 'react';
-import Navbar from './ui/navbar/navbar';
+// import Navbar from './navbar/navbar';
 import './ui/styles.css';
+// import Layout from './layout';
 
 type Props = {};
 
 function Page({}: Props) {
   return (
     <>
-      <div><Navbar/></div>
+      {/* <div><Navbar/></div> */}
       <div className='text-center pt-2 titlecolor'>IntQuo</div>
-      <div className='text-center pt-10 text-xl font-semibold mt-10'>Your guide to</div>
-      <div className='text-center  text-5xl pt-6 mt-15'> Interview</div>
+      <div className='text-center pt-10 text-xl font-semibold mt-10'>Your guide to attain</div>
+      <div className='text-center  text-5xl pt-6 mt-15 titlecolor'> Interview</div>
       <div className='hellostyle'>
         {/* <div className='circle-container'>
           <div className='circle'></div>
@@ -31,7 +32,11 @@ function Page({}: Props) {
           <span className='circle-text'>r</span>
           <span className='circle-text'>y</span>
           </div>
+         
         </div>
+        <div className='green-section1'>
+             
+          </div>
       {/* </div> */}
     </>
   );

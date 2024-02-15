@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Header from "./header";
-import Navbar from "../ui/navbar/navbar";
+// import Navbar from "../navbar/navbar";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -53,7 +53,7 @@ export default function Register() {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Header />
       <div className="flex justify-space-evenly">
         <form
