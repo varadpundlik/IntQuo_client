@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 
 .titlecolor {
     color: #9ef01a;
@@ -75,3 +76,11 @@
     background-color: #38B000;
     height: 42vw;
 }
+
+.notable {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    /* font-size: larger; */
+    font-style: normal;
+  }
+  

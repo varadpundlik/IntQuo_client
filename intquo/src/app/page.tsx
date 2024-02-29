@@ -36,9 +36,20 @@ function Page({}: Props) {
           <span className='circle-text'>y</span>
         </div>
       </div>
-      <div className='green-section1'>
+      <div className='green-section1' style={{ margin: '10px' }}>
         {/* Provide alt text for accessibility */}
-        <Image src={doodle} alt='Scribble Doodle' width={190} height={190} />
+        <div className="flex">
+  <div className="flex-2 p-5">
+    <Image src={doodle} alt='Scribble Doodle' width={150} height={160} style={{ transform: 'rotate(345deg)' }} />
+  </div>
+  <div className="flex-1 p-5">
+    <p className='notable text-4xl text-black'>Discover the interview guide</p>
+  </div>
+  <div className="flex-1 p-5 text-black" style={{ fontWeight: 'bold' }}>
+    Ever felt like youve stumbled your way through an interview? Worry no longer, friend! Our platform is the wind at your back and the solid ground under your feet. A swirling blend of experience-based learning and expert guidance will take you from zero to interview hero.
+  </div>
+</div>
+
       </div>
     </>
   );
