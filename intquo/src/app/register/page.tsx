@@ -53,161 +53,164 @@ export default function Register() {
 
   return (
     <div>
-      {/* <Navbar /> */}
-      <Header />
-      <div className="flex justify-space-evenly">
-        <form
-          className="w-1/2 p-6 rounded shadow px-8 pt-6 pb-8 mb-4"
-          onSubmit={handleSubmit}
-        >
-          <h1 className="text-2xl font-bold mb-6">Register</h1>
-          <div className="mb-4">
-            <label
-              htmlFor="username"
-              className="block text-white font-bold mb-2"
-            >
-              Username
-            </label>
-            <input
-              type="text"
-              id="username"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="firstName"
-              className="block text-white font-bold mb-2"
-            >
-              First Name
-            </label>
-            <input
-              type="text"
-              id="firstName"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="lastName"
-              className="block text-white font-bold mb-2"
-            >
-              Last Name
-            </label>
-            <input
-              type="text"
-              id="lastName"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="password"
-              className="block text-white font-bold mb-2"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="password"
-              className="block text-white font-bold mb-2"
-            >
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={password2}
-              onChange={(e) => setPassword2(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-white font-bold mb-2"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="passoutYear"
-              className="block text-white font-bold mb-2"
-            >
-              Passout Year
-            </label>
-            <input
-              type="number"
-              id="passoutYear"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={passoutYear}
-              onChange={(e) => setPassoutYear(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="college"
-              className="block text-white font-bold mb-2"
-            >
-              College
-            </label>
-            <input
-              type="text"
-              id="college"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={college}
-              onChange={(e) => setCollege(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="currentOrg"
-              className="block  text-white font-bold mb-2"
-            >
-              Current Organization
-            </label>
-            <input
-              type="text"
-              id="currentOrg"
-              className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-              value={currentOrg}
-              onChange={(e) => setCurrentOrg(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-[#9ef01a] text-white py-2 px-4 rounded hover:bg-indigo-600"
+      <div className="flex justify-center items-center bg-black">
+        {/* <Navbar /> */}
+        <div className="flex justify-space-evenly bg-gray-800 mx-20 my-20 rounded border">
+          <form
+            className="w-1/2 p-6 rounded shadow px-8 pt-6 pb-8 mb-4"
+            onSubmit={handleSubmit}
           >
-            Register
-          </button>
-        </form>
-        <div>
-          <img className="px-650 pt-10" src="https://cdni.iconscout.com/illustration/premium/thumb/fill-registration-form-6492574-5402759.png?f=webp" />
+            <h1 className="text-2xl font-bold mb-6">Register</h1>
+            <div className="mb-4">
+              <label
+                htmlFor="username"
+                className="block text-white font-bold mb-2"
+              >
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="firstName"
+                className="block text-white font-bold mb-2"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="lastName"
+                className="block text-white font-bold mb-2"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="password"
+                className="block text-white font-bold mb-2"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="password"
+                className="block text-white font-bold mb-2"
+              >
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={password2}
+                onChange={(e) => setPassword2(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className="block text-white font-bold mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="passoutYear"
+                className="block text-white font-bold mb-2"
+              >
+                Passout Year
+              </label>
+              <input
+                type="number"
+                id="passoutYear"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={passoutYear}
+                onChange={(e) => setPassoutYear(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="college"
+                className="block text-white font-bold mb-2"
+              >
+                College
+              </label>
+              <input
+                type="text"
+                id="college"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={college}
+                onChange={(e) => setCollege(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="currentOrg"
+                className="block  text-white font-bold mb-2"
+              >
+                Current Organization
+              </label>
+              <input
+                type="text"
+                id="currentOrg"
+                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+                value={currentOrg}
+                onChange={(e) => setCurrentOrg(e.target.value)}
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-700"
+            >
+              Register
+            </button>
+          </form>
+          <div>
+            <img
+              className="px-650 pt-10"
+              src="https://cdni.iconscout.com/illustration/premium/thumb/fill-registration-form-6492574-5402759.png?f=webp"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 }
-//comment
