@@ -2,7 +2,10 @@
 import { useState } from "react";
 import Header from "./header";
 import Navbar from "../navbar/navbar";
+import Image from "next/image";
 import axios from "axios";
+import Animation from "../ui/assests/login-animate.svg";
+
 export default function Register() {
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -49,36 +52,36 @@ export default function Register() {
     ) {
       const user = {
         username,
-        first_name:firstName,
-        last_name:lastName,
+        first_name: firstName,
+        last_name: lastName,
         password,
         email,
-        passout_year:passoutYear,
+        passout_year: passoutYear,
         college,
         currentOrg,
       };
 
       console.log(user);
-      axios.post("http://localhost:5000/user", user).then((res:any) => {
+      axios.post("http://localhost:5000/user", user).then((res: any) => {
         console.log(res);
         alert("User registered successfully!");
         const token = res.data.data.accessToken;
         localStorage.setItem("token", token);
       });
-
     }
   };
 
   return (
     <div>
-      <div className="flex justify-center items-center bg-black">
-        {/* <Navbar /> */}
-        <div className="flex justify-space-evenly bg-gray-800 mx-20 my-20 rounded border">
+      <div className="bg-black min-h-screen flex justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-gray-800 mx-2 md:mx-20 my-20 rounded border">
           <form
-            className="w-1/2 p-6 rounded shadow px-8 pt-6 pb-8 mb-4"
+            className="w-full md:w-1/2 p-6 rounded shadow-lg px-8 pt-6 pb-8 mb-4"
             onSubmit={handleSubmit}
           >
-            <h1 className="text-2xl font-bold mb-6">Register</h1>
+            <h1 className="text-2xl font-bold mb-6 text-white text-center">
+              Register
+            </h1>
             <div className="mb-4">
               <label
                 htmlFor="username"
@@ -216,16 +219,13 @@ export default function Register() {
             </div>
             <button
               type="submit"
-              className="w-full text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-700"
+              className="w-full text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-700 mt-4"
             >
               Register
             </button>
           </form>
-          <div>
-            <img
-              className="px-650 pt-10"
-              src="https://cdni.iconscout.com/illustration/premium/thumb/fill-registration-form-6492574-5402759.png?f=webp"
-            />
+          <div className="hidden md:block">
+            <Image src={Animation} alt="Login Animation" />
           </div>
         </div>
       </div>
