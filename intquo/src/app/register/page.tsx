@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Header from "./header";
-// import Navbar from "../navbar/navbar";
-
+import Navbar from "../navbar/navbar";
+import axios from "axios";
 export default function Register() {
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -47,7 +47,25 @@ export default function Register() {
       college &&
       currentOrg
     ) {
-      alert("Form submitted");
+      const user = {
+        username,
+        first_name:firstName,
+        last_name:lastName,
+        password,
+        email,
+        passout_year:passoutYear,
+        college,
+        currentOrg,
+      };
+
+      console.log(user);
+      axios.post("http://localhost:5000/user", user).then((res:any) => {
+        console.log(res);
+        alert("User registered successfully!");
+        const token = res.data.data.accessToken;
+        localStorage.setItem("token", token);
+      });
+
     }
   };
 
