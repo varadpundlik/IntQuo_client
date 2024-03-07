@@ -5,7 +5,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <div className="navbar bg-black fixed top-0 left-0 w-full z-30">
+    <div className="navbar bg-black fixed top-0 left-0 w-full z-30 border border-white rounded-3x1">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,7 +29,7 @@ const Navbar = (props: Props) => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link href="http://localhost:3000/">
+              <Link href="/">
                 <p>Home</p>
               </Link>
             </li>
@@ -53,7 +53,7 @@ const Navbar = (props: Props) => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="http://localhost:3000/">
+            <Link href="/">
               <p>Home</p>
             </Link>
           </li>
@@ -76,10 +76,10 @@ const Navbar = (props: Props) => {
       </div>
       <div className="navbar-end">
         {/* Use Link from Next.js for navigation */}
-        <Link href="http://localhost:3000/Login">
+        <Link href="/Login">
           <div className="text-blue-100 p-4">Login</div>
         </Link>
-        <Link href="http://localhost:3000/register">
+        <Link href="/register">
           <button className="btn bg-yellow-200 text-black">Sign Up</button>
         </Link>
       </div>
