@@ -6,7 +6,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div>
+    <div className='z-10'>
     <div className="navbar bg-base-100">
     <div className="navbar-start">
       <div className="dropdown">
