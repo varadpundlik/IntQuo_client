@@ -1,4 +1,3 @@
-
 import React from "react";
 
 // Import type and fonts
@@ -28,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Include your head elements here */}
-      </head>
+      <head>{/* Include your head elements here */}</head>
       <body className={inter.className}>
         <Navbar />
         {children}

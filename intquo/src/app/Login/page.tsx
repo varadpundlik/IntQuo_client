@@ -16,7 +16,7 @@ const Page: React.FC<Props> = () => {
   };
 
   return (
-    <div>
+    <div className="z-30">
       <div className="flex justify-center items-center h-screen bg-black overflow-hidden">
         <div className="flex justify-space-evenly  bg-gray-800 rounded border ">
           <div>
