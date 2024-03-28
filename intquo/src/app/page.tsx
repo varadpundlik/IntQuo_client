@@ -9,7 +9,7 @@ import "./ui/styles.css"; // Ensure the CSS path matches your project structure
 function Page() {
   return (
     <>
-      <div className="background z-0">
+      <div className="background z-0 h-screen">
         <span></span>
         <span></span>
         <span></span>
@@ -43,8 +43,8 @@ function Page() {
             </div>
           </div>
           <div className=" mt-10px">
-            <div className="flex flex-col md:flex-row">
-              <div className="flex-1 md:p-5">
+            {/* <div className="flex flex-col md:flex-row"> */}
+              {/* <div className="flex-1 md:p-5">
                 <Image
                   src={doodle}
                   alt="Scribble Doodle"
@@ -52,20 +52,20 @@ function Page() {
                   height={160}
                   className="transform rotate-345"
                 />
-              </div>
-              <div className="flex-1 md:p-5">
+              </div> */}
+              {/* <div className="flex-1 md:p-5">
                 <p className="notable text-4xl text-black">
                   Discover the interview guide
-                </p>
-              </div>
+                </p> */}
+              {/* </div>
               <div className="flex-1 md:p-5 text-black font-bold">
                 Ever felt like you've stumbled your way through an interview?
                 Worry no longer, friend! Our platform is the wind at your back
                 and the solid ground under your feet. A swirling blend of
                 experience-based learning and expert guidance will take you from
                 zero to interview hero.
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
       </div>
