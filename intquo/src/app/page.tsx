@@ -42,7 +42,7 @@ function Page() {
               <span className="circle-text">y</span>
             </div>
           </div>
-          <div className="green-section1 mt-10px">
+          <div className=" mt-10px">
             <div className="flex flex-col md:flex-row">
               <div className="flex-1 md:p-5">
                 <Image
