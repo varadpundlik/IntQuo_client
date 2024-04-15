@@ -5,6 +5,7 @@ import Navbar from "../navbar/navbar";
 import Image from "next/image";
 import axios from "axios";
 import Animation from "../ui/assests/login-animate.svg";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -62,11 +63,12 @@ export default function Register() {
       };
 
       console.log(user);
-      axios.post("http://localhost:5000/user", user).then((res: any) => {
+      axios.post("https://intquo-server.onrender.com/user", user).then((res: any) => {
         console.log(res);
         alert("User registered successfully!");
         const token = res.data.data.accessToken;
         localStorage.setItem("token", token);
+        window.location.href = "/myprofile";
       });
     }
   };
