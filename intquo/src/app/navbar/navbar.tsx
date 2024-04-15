@@ -1,9 +1,26 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import { useState,useEffect } from "react";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const [isLogged, setIsLogged] = React.useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLogged(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLogged(false);
+    window.location.href = "/";
+  }
+
   return (
     <div className="navbar bg-transparent fixed top-0 left-0 w-full z-30  rounded-3x1">
       <div className="navbar-start">
@@ -76,12 +93,18 @@ const Navbar = (props: Props) => {
       </div>
       <div className="navbar-end">
         {/* Use Link from Next.js for navigation */}
-        <Link href="/Login">
+        {!isLogged && (<Link href="/Login">
           <div className="text-blue-100 p-4">Login</div>
-        </Link>
-        <Link href="/register">
+        </Link>)}
+        {!isLogged && (<Link href="/register">
           <button className="btn bg-yellow-200 text-black">Sign Up</button>
-        </Link>
+        </Link>)}
+        {isLogged && (<Link href="/myprofile">
+          <div className="text-blue-100 p-4">My Profile</div>
+        </Link>)}
+        {isLogged && (<button onClick={handleLogout}>
+          <div className="text-blue-100 p-4">Logout</div>
+        </button>)}
       </div>
     </div>
   );

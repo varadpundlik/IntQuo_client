@@ -10,8 +10,23 @@ type Props = {};
 const Page: React.FC<Props> = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
+  const handleSubmit = (e: any) => {
+    fetch("https://intquo-server.onrender.com/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.accessToken) {
+          localStorage.setItem("token", data.accessToken);
+          window.location.href = "/myprofile";
+        }
+      });
     e.preventDefault();
   };
 
@@ -25,21 +40,7 @@ const Page: React.FC<Props> = () => {
             onSubmit={handleSubmit}
           >
             <h1 className="text-2xl font-bold mb-6">Login</h1>
-            <div className="mb-4">
-              <label
-                htmlFor="username"
-                className="block text-white font-bold mb-2"
-              >
-                Username
-              </label>
-              <input
-                type="text"
-                id="username"
-                className="w-full text-black px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
+            
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -75,6 +76,7 @@ const Page: React.FC<Props> = () => {
             <button
               type="submit"
               className="w-full text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-700"
+              onClick={handleSubmit}
             >
               Register
             </button>
