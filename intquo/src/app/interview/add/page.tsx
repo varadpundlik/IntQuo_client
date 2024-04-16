@@ -89,7 +89,7 @@ const Page: React.FC = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:5000/interview',
+        'https://intquo-server.onrender.com/interview',
         formData,
         {
           headers: {
