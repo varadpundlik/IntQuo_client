@@ -84,10 +84,15 @@ const Navbar = (props: Props) => {
           </details>
         </li> */}
           <li>
-            <a>Prepare</a>
+            <Link href="/questions">
+              <p>Prepare</p>
+            </Link>
           </li>
           <li>
-            <a>Interview</a>
+            
+            <Link href="/interview">
+              <p>Interview</p>
+            </Link>
           </li>
         </ul>
       </div>
