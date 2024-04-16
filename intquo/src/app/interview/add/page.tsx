@@ -100,6 +100,10 @@ const Page: React.FC = () => {
       );
       const data = response.data;
       console.log(data); // Handle response from backend
+      if(response.status === 201){
+        alert('Interview added successfully');
+        window.location.href = '/interview';
+      }
     } catch (error) {
       console.error('Error:', error);
     }
