@@ -30,7 +30,7 @@ const Page: React.FC<Props> = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 px-4 py-12">
+    <div className="min-h-screen px-4 py-12">
       <div className="max-w-4xl mx-auto">
         {loading ? (
           <div className="text-center text-lg text-gray-600">Loading...</div>

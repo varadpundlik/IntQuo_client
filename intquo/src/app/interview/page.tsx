@@ -18,7 +18,7 @@ const Page: React.FC<Props> = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 px-4 py-12">
+    <div className="min-h-screen px-4 py-12">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold text-gray-800">Interviews</h1>

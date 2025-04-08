@@ -29,7 +29,7 @@ const Page: React.FC<Props> = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+    <div className="min-h-screen   flex items-center justify-center px-4">
       <div className="bg-white w-full max-w-lg p-8 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           User Profile

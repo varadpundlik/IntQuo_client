@@ -41,7 +41,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 px-4 py-12">
+    <div className="min-h-screen px-4 py-12">
       <div className="max-w-4xl mx-auto">
         <div className="mb-6 text-center">
           <input
